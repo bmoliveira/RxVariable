@@ -9,13 +9,14 @@ platform :android do
   end
 
   desc "Upload RxVariable"
-  lane :release_rx_variable do
+  lane :release_variable do
+    gradle(task: "clean")
     gradle(task: ":variable:install")
     gradle(task: ":variable:bintrayUpload")
   end
 
   desc "Deploy all libs to maven"
   lane :deploy do
-    release_rx_variable
+    release_variable
   end
 end

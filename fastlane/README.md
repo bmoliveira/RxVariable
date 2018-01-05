@@ -23,9 +23,9 @@ xcode-select --install
 fastlane android test
 ```
 Runs all the tests
-### android release_rx_variable
+### android release_variable
 ```
-fastlane android release_rx_variable
+fastlane android release_variable
 ```
 Upload RxVariable
 ### android deploy
